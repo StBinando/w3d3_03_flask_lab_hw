@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:wght@300&display=swap" rel="stylesheet">
     <title>{{ title }}</title>
 </head>
+
 <body>
-    <h1> {{ title }} </h1>
-    {% for order in my_orders %}
-        <sdiv>
-            <a href="/order_{{order.order_number}}">Order {{order.order_number}}</a>
+    <header>
+        <h1> {{ title }} </h1>
+    </header>
+    
+    <main class = tickets>
+        {% for order in my_orders %}
+        <div class = summary>
+            <a href="/order_{{order.order_number}}" class= order>Order {{order.order_number}}</a>
             <p>date: {{order.order_date}}</p>
             <p>customer: {{order.customer_name}}</p>
-            <hr>
         </div>
-    {% endfor %}
+        {% endfor %}
+    </main>
+
 </body>
 </html>

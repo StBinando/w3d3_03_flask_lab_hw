@@ -1,0 +1,139 @@
+body{
+    background-color: #f3f3f4ff;
+    font-family: 'Averia Libre', cursive;
+}
+
+header{
+    background-color: #636a62ff;
+    height: 58px;
+    font-size: 36px;
+    color: #f3f3f4ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#single_order{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#back{
+    font-size: 14px;
+    color: #0f0645ff;
+    display: flex;
+    width: 50px;
+    height: 30px;
+    flex-wrap: wrap;
+    border: #0f0645ff;
+    background-color: #f3f3f4ff;
+    margin-right: 30px;
+    padding: 3px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+header > h1{
+    padding: 30px;
+}
+
+.tickets{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 1px solid #636a62ff;
+    border-radius: 30px;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.summary{
+    background-color: #0f0645ff;
+    color: #ceed02ff;
+    font-size: 18px;
+    margin: 10px;
+    padding: 20px;
+    height: 80px;
+    width: 200px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.summary > a{
+    color: #f3f3f4ff;
+    font-size: 24px;
+}
+
+.summary > h3{
+    font-size: 18px;
+}
+
+.table{
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid #0f0645ff;
+    border-radius: 20px;
+}
+.table-head{
+    background-color: #ceed02ff;
+    color: #0f0645ff;
+    font-size: 18px;
+    border-radius: 17px;
+    margin: 3px;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#grid_container1{
+    background-color:#0f0645ff;
+    font-size: 14px;
+    color:#ceed02ff;
+    border-radius: 17px;
+    margin: 3px;
+    height: 22px;
+    display: grid;
+    grid-template-areas:
+        'code1 description1 quantity1';
+    grid-template-columns: 3fr 5fr 2fr;
+}
+
+#grid_container2{
+    font-size: 14px;
+    color:#0f0645ff;
+    border-radius: 17px;
+    padding-top: 3px;
+    margin: 3px;
+    display: grid;
+    grid-template-areas:
+        'code2 description2 quantity2';
+    grid-template-columns: 3fr 5fr 2fr;
+}
+
+#code1{
+    grid-area: code1;
+    text-align: center;
+}
+#description1{
+    grid-area: description1;
+}
+#quantity1{
+    grid-area: quantity1;
+    text-align: center;
+}
+#code2{
+    grid-area: code2;
+    text-align: center;
+}
+#description2{
+    grid-area: description2;
+}
+#quantity2{
+    grid-area: quantity2;
+    text-align: center;
+}

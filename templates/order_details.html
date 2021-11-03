@@ -1,22 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:wght@300&display=swap" rel="stylesheet">
     <title>{{ title }}</title>
 </head>
 <body>
-    <h1>{{ title }}</h1>
-    <section>
-        <p>date: {{order.order_date}}</p>
-        <p>customer: {{order.customer_name}}</p>
-        {% for key in order.items %}
-            <p>item code: {{key.code}}</p>
-            <p>item description: {{key.description}}</p>
-            <p>quantity: {{order.items[key]}}</p>
-        {% endfor %}
-        <hr>
+    <header id=single_order>
+        <h1>{{ title }}</h1>
+        <a href="/" id=back>↩︎ all orders</a>
+    </header>
+
+    <main class = table>
+        <header class = table-head>
+            <p>date: {{order.order_date}}</p>
+            <p>customer: {{order.customer_name}}</p>
+        </header>
+
+        <section>
+            <header  id=grid_container1>
+                <h4 id=code1>item code:</h4>
+                <h4 id=description1>item description:</h4>
+                <h4 id=quantity1>quantity:</h4>
+            </header>
+            {% for key in order.items %}
+                <div id=grid_container2>
+                    <p id=code2>{{key.code}}</p>
+                    <p id=description2>{{key.description}}</p>
+                    <p id=quantity2>{{order.items[key]}}</p>
+                </div>
+                {% endfor %}
+        </section>
     </section>
 </body>
 </html>
