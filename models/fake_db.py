@@ -8,9 +8,9 @@ item_3 = Item("P52", "Blutooth headset")
 item_4 = Item("Z99", "USB hub")
 
 
-order_1 = Order("X875", item_1, 10)
-order_2 = Order("T026", item_2, 3)
-order_3 = Order("d452", item_3, 5)
-order_4 = Order("B765", item_4, 2)
+order_1 = Order("Stefano", "1 Jan 2020", item_1, 10)
+order_2 = Order("Almas", "3 March 2021", item_2, 3)
+order_3 = Order("Keith", "5 September 2021", item_3, 5)
+order_4 = Order("Roger", "3 November 2021", item_4, 2)
 
 all_orders = [order_1, order_2, order_3, order_4]
