@@ -4,4 +4,3 @@ class Order():
         self.customer_name = customer_name
         self.order_date= order_date 
         self.items = items
-        # self.quantity = quantity

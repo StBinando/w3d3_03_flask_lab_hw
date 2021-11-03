@@ -9,17 +9,12 @@
 <body>
     <h1> {{ title }} </h1>
     {% for order in my_orders %}
-        <section>
-            <a href="/order#{{order.order_number}}">Order {{order.order_number}}</a>
+        <sdiv>
+            <a href="/order_{{order.order_number}}">Order {{order.order_number}}</a>
             <p>date: {{order.order_date}}</p>
             <p>customer: {{order.customer_name}}</p>
-            {% for key in order.items %}
-                <p>item code: {{key.code}}</p>
-                <p>item description: {{key.description}}</p>
-                <p>quantity: {{order.items[key]}}</p>
-            {% endfor %}
             <hr>
-        </section>
+        </div>
     {% endfor %}
 </body>
 </html>
