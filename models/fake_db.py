@@ -6,11 +6,36 @@ item_1 = Item("A01", "MacBook Pro")
 item_2 = Item("L15", '28" LED Screen')
 item_3 = Item("P52", "Blutooth headset")
 item_4 = Item("Z99", "USB hub")
+item_5 = Item("I12", "iPhone 13")
+item_6 = Item("K69", "wireless keyboard")
+
+order_1_items = {
+    item_1 : 10,
+    item_2 : 2,
+    item_6 : 2
+}
+order_2_items = {
+    item_1 : 1,
+    item_2 : 1,
+    item_4 : 1,
+    item_3 : 1,
+    item_6 : 1
+}
+order_3_items = {
+    item_5 : 1,
+    item_3 : 1
+}
+order_4_items = {
+    item_1 : 10,
+    item_2 : 2,
+    item_6 : 2,
+    item_3 : 10
+}
 
 
-order_1 = Order("Stefano", "1 Jan 2020", item_1, 10)
-order_2 = Order("Almas", "3 March 2021", item_2, 3)
-order_3 = Order("Keith", "5 September 2021", item_3, 5)
-order_4 = Order("Roger", "3 November 2021", item_4, 2)
+order_1 = Order("A867", "Stefano", "1 Jan 2020", order_1_items)
+order_2 = Order("D465", "Almas", "3 March 2021", order_2_items)
+order_3 = Order("G196", "Keith", "5 September 2021", order_3_items)
+order_4 = Order("Q902", "Roger", "3 November 2021", order_4_items)
 
 all_orders = [order_1, order_2, order_3, order_4]
