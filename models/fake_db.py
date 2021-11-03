@@ -1,6 +1,7 @@
 from models.items import Item
 from models.orders import *
 from models.items import *
+import datetime
 
 item_1 = Item("A01", "MacBook Pro")
 item_2 = Item("L15", '28" LED Screen')
@@ -33,9 +34,9 @@ order_4_items = {
 }
 
 
-order_1 = Order("A867", "Stefano", "1 Jan 2020", order_1_items)
-order_2 = Order("D465", "Almas", "3 March 2021", order_2_items)
-order_3 = Order("G196", "Keith", "5 September 2021", order_3_items)
-order_4 = Order("Q902", "Roger", "3 November 2021", order_4_items)
+order_1 = Order("A867", "Stefano", datetime.date(2020, 1, 1), order_1_items)
+order_2 = Order("D465", "Almas", datetime.date(2020, 3, 25), order_2_items)
+order_3 = Order("G196", "Keith", datetime.date(2020, 5, 19), order_3_items)
+order_4 = Order("Q902", "Roger", datetime.date(2020, 11, 3), order_4_items)
 
 all_orders = [order_1, order_2, order_3, order_4]

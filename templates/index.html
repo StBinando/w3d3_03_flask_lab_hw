@@ -21,7 +21,7 @@
         {% for order in my_orders %}
         <div class = summary>
             <a href="/order_{{order.order_number}}" class= order>Order {{order.order_number}}</a>
-            <p>date: {{order.order_date}}</p>
+            <p>date: {{order.order_date.strftime("%b %d %Y")}}</p>
             <p>customer: {{order.customer_name}}</p>
         </div>
         {% endfor %}
