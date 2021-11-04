@@ -4,7 +4,7 @@ body{
 }
 
 header{
-    background-color: #636a62ff;
+    background-color: #353b34;
     height: 58px;
     font-size: 36px;
     color: #f3f3f4ff;
@@ -41,7 +41,7 @@ header > h1{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    border: 1px solid #636a62ff;
+    border: 1px solid #353b34;
     border-radius: 30px;
     width: 80%;
     margin: auto;
